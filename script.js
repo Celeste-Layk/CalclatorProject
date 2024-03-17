@@ -1,4 +1,3 @@
-import calculator from "./calculator.js";
 // Actions
 // click a number
 // click  clear button
@@ -10,41 +9,43 @@ import calculator from "./calculator.js";
 // steps
 // 1. Assign export of calculator in calculator.js
 // 2. Add event listeners for the buttons
-// 3. activate the click for clear button, and number using if statements (look at the html to find the codes for matches)
+// 3. activate the click for clear button, and number using if statements (look at the html to find the codes for matches)(. clear(), .addDigit(e.target.textContent))
 // 4. make the delete button clickable
-// 5. make operations clickable
-// 6. activate the equals
+// 5. make operations clickable (.chooseOperation(e.target.textContent))
+// 6. activate the equals (evaluate)
 // 7. go to html and find what div contains the class that shows the number in the display screen and get queryselectors
 // 8. add displays to the calculator object
 //9. in calculator.js add displays to calculator class thats being exported
-//10.
+//10. create a clear method on calculator on both calculaotr js and script.js ( assign it to textContent and make primary 0 and the others empty strings)
+//11.
+import Calculator from "./calculator.js";
 
-const primaryOperandDisplay = document.querySelector("[dat-primary-operand");
+const primaryOperandDisplay = document.querySelector("[data-primary-operand]");
 const secondaryOperandDisplay = document.querySelector(
-  "[data-secondary-operand"
+  "[data-secondary-operand]"
 );
-const operationDisplay = document.querySelector("[data-operation");
+const operationDisplay = document.querySelector("[data-operation]");
 
-const calculator = new calculator(
+const calculator = new Calculator(
   primaryOperandDisplay,
   secondaryOperandDisplay,
   operationDisplay
-); // creating a method to clear calculator
+);
 
-document.addEventListener(click, e => {
-  if (e.target.matches("[data-all-clear")) {
+document.addEventListener("click", e => {
+  if (e.target.matches("[data-all-clear]")) {
     calculator.clear();
   }
-  if (e.target.matches("[data-number")) {
-    calculator.addDigit(e.target.textcontent); // adds the number to the calculator
+  if (e.target.matches("[data-number]")) {
+    calculator.addDigit(e.target.textContent);
   }
-  if (e.target.matches("[data-delete")) {
-    calculator.removeDigit(); // clears the last digit on screen (one digit at a time)
+  if (e.target.matches("[data-delete]")) {
+    calculator.removeDigit();
   }
-  if (e.target.matches("[data-operation")) {
-    calculator.chooseOperation(e.target.textcontent); // it uses the text to select the spesific operation
+  if (e.target.matches("[data-operation]")) {
+    calculator.chooseOperation(e.target.textContent);
   }
-  if (e.target.matches("[data-equals")) {
-    calculator.evaluate(); //get response from claculator
+  if (e.target.matches("[data-equals]")) {
+    calculator.evaluate();
   }
 });
