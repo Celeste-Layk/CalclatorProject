@@ -17,7 +17,9 @@
 // 8. add displays to the calculator object
 //9. in calculator.js add displays to calculator class thats being exported
 //10. create a clear method on calculator on both calculaotr js and script.js ( assign it to textContent and make primary 0 and the others empty strings)
-//11.
+//11. make numbers clickable start with 0-9. Remember to remove the 0 if it shows up once numbers are typed in
+// 12. add getters in calculator.js
+//13. add setters to calculator.js
 import Calculator from "./calculator.js";
 
 const primaryOperandDisplay = document.querySelector("[data-primary-operand]");
