@@ -20,6 +20,13 @@
 //11. make numbers clickable start with 0-9. Remember to remove the 0 if it shows up once numbers are typed in
 // 12. add getters in calculator.js
 //13. add setters to calculator.js
+//14. Add commas to the calculator Use the js intl.numberFormat("en",{maximumFractionDigits: 20})
+//15. add dataset.value setters
+//16 add the decimal and make it so it is only added once
+//17 remove digit and make sure the 0 stays in place
+//18 choose operation option and clear it
+//19 make part of code private
+
 import Calculator from "./calculator.js";
 
 const primaryOperandDisplay = document.querySelector("[data-primary-operand]");
